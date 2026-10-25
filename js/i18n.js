@@ -97,7 +97,7 @@ var SQ = {
     'Our Menu': 'Menuja jonë',
     'Hair, nails, lashes and body treatments — each one a ritual designed around you.': 'Flokë, thonj, qerpikë dhe trajtime trupi — secili një ritual i krijuar për ju.',
     'Restorative treatments, dimensional colour and flawless makeup — all under one roof.': 'Trajtime rigjeneruese, ngjyra me dimension dhe make-up i përsosur — të gjitha në një vend.',
-    'Polished, healthy hands and feet, finished with care and precision.': 'Duar dhe këmbë të kujdesura e të shëndetshme, të përfunduara me kujdes dhe precizion.',
+    'Polished, healthy hands and feet, finished with care and precision.': 'Duar dhe këmbë të kujdesura e të shëndetshme, të përfunduara me shumë kujdes.',
     'Lifted lashes and defined brows that frame your face naturally.': 'Qerpikë të ngritur dhe vetulla të përcaktuara që e kornizojnë fytyrën tuaj natyrshëm.',
     'Sculpting and relaxing treatments that leave body and face renewed.': 'Trajtime formësuese dhe relaksuese që e lënë trupin dhe fytyrën të rinovuar.',
     'Book': 'Rezervo',
