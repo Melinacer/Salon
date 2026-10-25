@@ -4,21 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | Golden Paradise Salon</title>
-<meta name="description" content="Browse a gallery of cuts, color, and styling work from the Golden Paradise Salon team.">
+<meta name="description" content="Real work and moments from Golden Paradise Salon — hair, nails, lashes and brows, body treatments and our studio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="lux">
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-        </svg>
-      </span>
+      <span class="logo-mark" aria-hidden="true"><img src="images/logo-figure.png" alt=""></span>
       Golden <span>Paradise</span>
     </a>
     <nav class="nav-links">
@@ -29,13 +26,19 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-cta">
-      <button class="lang-select" type="button" aria-label="Select language">
-        EN
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="lang-switch">
+        <button class="lang-select" type="button" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current">EN</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </button>
-      <a href="contact.html" class="btn btn-dark">Book Now</a>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" role="menuitemradio" data-lang="en" aria-checked="true">English</button>
+          <button type="button" role="menuitemradio" data-lang="sq" aria-checked="false">Shqip</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-gold btn-pill">Book Now</a>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -43,46 +46,172 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section class="gal-hero">
+  <div class="lux-glow g1" aria-hidden="true"></div>
+  <div class="lux-glow g2" aria-hidden="true"></div>
   <div class="container">
-    <span class="eyebrow">Our Work</span>
-    <h1>Gallery</h1>
-    <p class="breadcrumb">Home / Gallery</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Recent Work</span>
-      <h2>A Look at the Studio</h2>
-      <p>Add your own photos here — replace each placeholder tile in <code>gallery.html</code> with an <code>&lt;img&gt;</code> pointing to a file in the <code>images/</code> folder.</p>
+    <div class="svc-hero-head">
+      <div>
+        <span class="eyebrow eyebrow-line" data-reveal>Our Work</span>
+        <h1 data-reveal data-i18n="gallery.h1" style="--d: 0.1s">Moments in <em class="text-shimmer">gold</em></h1>
+      </div>
+      <p class="lux-lead" data-reveal style="--d: 0.2s">A look at real work and moments from our studio — hair, nails, lashes and more.</p>
     </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-item tall"><span>Balayage Transformation</span></div>
-      <div class="gallery-item"><span>Precision Bob</span></div>
-      <div class="gallery-item"><span>Bridal Updo</span></div>
-      <div class="gallery-item wide"><span>Salon Interior</span></div>
-      <div class="gallery-item"><span>Copper Color</span></div>
-      <div class="gallery-item tall"><span>Hand-Tied Extensions</span></div>
-      <div class="gallery-item"><span>Editorial Waves</span></div>
-      <div class="gallery-item"><span>Blonde Highlights</span></div>
-      <div class="gallery-item wide"><span>Color Bar</span></div>
-      <div class="gallery-item"><span>Textured Lob</span></div>
+    <div class="gal-filters" role="group" aria-label="Filter photos" data-reveal style="--d: 0.3s">
+      <button type="button" class="active" data-filter="all">All</button>
+      <button type="button" data-filter="hair">Hair</button>
+      <button type="button" data-filter="nails">Nails</button>
+      <button type="button" data-filter="lashes">Lashes &amp; Brows</button>
+      <button type="button" data-filter="body">Body Shape</button>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
+<section class="gal-section">
   <div class="container">
-    <h2>Love what you see?</h2>
-    <p>Book an appointment and let's create your next look together.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold">Book Now</a>
+    <!-- Photos from the salon's Instagram accounts. To add one: copy a <figure class="gal-item">
+         block, point the <img> at your file in images/gallery/, and set data-cat to hair, nails,
+         lashes or body. -->
+    <div class="gal-grid">
+      <a href="https://www.instagram.com/golden_paradise_salon/" target="_blank" rel="noopener" class="gal-ig" data-ig-for="all hair">
+        <span class="about-ig-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></span>
+        <strong>@golden_paradise_salon</strong>
+        <span class="gal-ig-text">More looks on Instagram</span>
+        <span class="gal-ig-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.instagram.com/_golden_nailss/" target="_blank" rel="noopener" class="gal-ig" data-ig-for="nails">
+        <span class="about-ig-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></span>
+        <strong>@_golden_nailss</strong>
+        <span class="gal-ig-text">Our latest nail sets</span>
+        <span class="gal-ig-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.instagram.com/golden_lashes01/" target="_blank" rel="noopener" class="gal-ig" data-ig-for="lashes">
+        <span class="about-ig-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></span>
+        <strong>@golden_lashes01</strong>
+        <span class="gal-ig-text">Our latest lash &amp; brow work</span>
+        <span class="gal-ig-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.instagram.com/golden_bodyshape/" target="_blank" rel="noopener" class="gal-ig" data-ig-for="body">
+        <span class="about-ig-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></span>
+        <strong>@golden_bodyshape</strong>
+        <span class="gal-ig-text">Body treatments &amp; results</span>
+        <span class="gal-ig-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/nails-red.jpg" alt="Classic red manicure in front of the illuminated salon sign" loading="lazy"></button>
+        <figcaption><span>Nails</span>Classic red</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/lashes-before-after.jpg" alt="Lash lift before and after comparison" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Lash lift — before &amp; after</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/lashes-extensions.jpg" alt="Close-up of full, dark lash extensions on a blue eye" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Lash extensions</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="hair">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/hair-waves.jpg" alt="Glossy dark hair styled with white flowers" loading="lazy"></button>
+        <figcaption><span>Hair</span>Soft waves &amp; shine</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="body">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/body-sculpting.jpg" alt="Body sculpting massage on the abdomen" loading="lazy"></button>
+        <figcaption><span>Body Shape</span>Sculpting massage</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/services/nails.jpg" alt="Nude almond nails with gold flake details" loading="lazy"></button>
+        <figcaption><span>Nails</span>Gold flake almond nails</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/brows-laminated.jpg" alt="Close-up of laminated, shaped brows" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Laminated brows</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/nails-milky-almond.jpg" alt="Milky white almond nails" loading="lazy"></button>
+        <figcaption><span>Nails</span>Milky almond</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="hair">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/hair-nanoplasty-blonde.jpg" alt="Silky, straight blonde hair after a nanoplasty treatment" loading="lazy"></button>
+        <figcaption><span>Nanoplasty</span>Silky blonde finish</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="hair">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/hair-before-after.jpg" alt="Long curly hair before and after treatment" loading="lazy"></button>
+        <figcaption><span>Nanoplasty</span>Before &amp; after</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="hair">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/hair-nanoplasty-long.jpg" alt="Very long, glass-smooth hair after a nanoplasty treatment" loading="lazy"></button>
+        <figcaption><span>Nanoplasty</span>Long &amp; glass-smooth</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="body">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/body-wood-therapy.jpg" alt="Wood therapy roller massage on the legs" loading="lazy"></button>
+        <figcaption><span>Body Shape</span>Wood therapy</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/lashes-lift.jpg" alt="Lifted, curled lashes after a lash lift" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Lash Lift</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/nails-red-stiletto.jpg" alt="Red stiletto nails in front of the salon sign" loading="lazy"></button>
+        <figcaption><span>Nails</span>Red stiletto</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="body">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/body-before-after.jpg" alt="Body treatment before and after comparison" loading="lazy"></button>
+        <figcaption><span>Body Shape</span>Before &amp; after</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/lashes-lifted.jpg" alt="Close-up of a lifted lash look" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Lifted lashes</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/nails-cobalt.jpg" alt="Cobalt blue manicure in front of the salon sign" loading="lazy"></button>
+        <figcaption><span>Nails</span>Cobalt blue</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="body">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/body-treatment.jpg" alt="Body massage treatment" loading="lazy"></button>
+        <figcaption><span>Body Shape</span>Body treatment</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="lashes">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/brows-lashes.jpg" alt="Defined brows and lifted lashes" loading="lazy"></button>
+        <figcaption><span>Lashes &amp; Brows</span>Brows &amp; lashes</figcaption>
+      </figure>
+      <figure class="gal-item" data-cat="nails">
+        <button type="button" class="gal-open" aria-label="View photo"><img src="images/gallery/nails-pink-pedicure.jpg" alt="Pink pedicure on a Golden Paradise towel" loading="lazy"></button>
+        <figcaption><span>Nails</span>Pink pedicure</figcaption>
+      </figure>
+    </div>
+
+    <div class="gal-empty" hidden>
+      <p>More photos coming soon.</p>
+      <a href="https://www.instagram.com/golden_paradise_salon/" target="_blank" rel="noopener" class="link-secondary">Follow us on Instagram</a>
     </div>
   </div>
 </section>
+
+<section class="lux-cta">
+  <div class="container">
+    <div class="lux-cta-box" data-reveal>
+      <span class="eyebrow">Your chair is waiting</span>
+      <h2 data-i18n="gallery.cta.h2">Love what <em>you see?</em></h2>
+      <p>Book an appointment and let's create your next look together.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold btn-pill btn-shine">Book Now</a>
+        <a href="tel:+355676289840" class="btn btn-outline btn-pill">Call 067 628 9840</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full-screen photo viewer -->
+<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="lb-close" aria-label="Close">×</button>
+  <button type="button" class="lb-prev" aria-label="Previous photo">←</button>
+  <figure>
+    <img src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button type="button" class="lb-next" aria-label="Next photo">→</button>
+</div>
 
 <footer class="site-footer">
   <div class="container">
@@ -91,7 +220,7 @@
         <a href="index.html" class="logo">Golden <span>Paradise</span></a>
         <p>A luxury hair and beauty studio dedicated to expert craft and an elevated guest experience.</p>
         <div class="social-row">
-          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://www.instagram.com/golden_paradise_salon/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
           <a href="#" aria-label="Facebook">FB</a>
           <a href="#" aria-label="TikTok">TT</a>
         </div>
@@ -109,16 +238,14 @@
       <div class="footer-links">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
-          <li><a href="mailto:hello@goldenparadisesalon.com">hello@goldenparadisesalon.com</a></li>
-          <li><a href="contact.html">123 Bloom Street, Suite 4<br>Your City, ST 00000</a></li>
+          <li><a href="tel:+355676289840">067 628 9840</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Golden+Paradise+Salon+Kopshti+Botanik+Tirana" target="_blank" rel="noopener">Kopshti Botanik<br>Tiranë, Albania</a></li>
         </ul>
       </div>
       <div class="footer-hours">
         <h4>Hours</h4>
-        <div><span>Tue – Fri</span><span>9am – 7pm</span></div>
-        <div><span>Saturday</span><span>9am – 5pm</span></div>
-        <div><span>Sun – Mon</span><span>Closed</span></div>
+        <div><span>Wed – Mon</span><span>9am – 7pm</span></div>
+        <div><span>Tuesday</span><span>Closed</span></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -128,6 +255,7 @@
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

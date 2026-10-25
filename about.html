@@ -4,21 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Golden Paradise Salon</title>
-<meta name="description" content="Meet the team behind Golden Paradise Salon and learn about our story, values, and approach to hair care.">
+<meta name="description" content="The story behind Golden Paradise Salon and Beauty by Myself — hair, nails, lashes and body treatments with a personal, unhurried touch.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="lux">
 
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
-        </svg>
-      </span>
+      <span class="logo-mark" aria-hidden="true"><img src="images/logo-figure.png" alt=""></span>
       Golden <span>Paradise</span>
     </a>
     <nav class="nav-links">
@@ -29,13 +26,19 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-cta">
-      <button class="lang-select" type="button" aria-label="Select language">
-        EN
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="lang-switch">
+        <button class="lang-select" type="button" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <span class="lang-current">EN</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </button>
-      <a href="contact.html" class="btn btn-dark">Book Now</a>
+        </button>
+        <div class="lang-menu" role="menu">
+          <button type="button" role="menuitemradio" data-lang="en" aria-checked="true">English</button>
+          <button type="button" role="menuitemradio" data-lang="sq" aria-checked="false">Shqip</button>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-gold btn-pill">Book Now</a>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -43,76 +46,161 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section class="about-hero">
+  <div class="lux-glow g1" aria-hidden="true"></div>
+  <div class="lux-glow g2" aria-hidden="true"></div>
+  <div class="about-hero-bg" aria-hidden="true"></div>
   <div class="container">
-    <span class="eyebrow">Our Story</span>
-    <h1>About Golden Paradise</h1>
-    <p class="breadcrumb">Home / About</p>
+    <div class="about-hero-head">
+      <div class="about-hero-mark" data-reveal aria-hidden="true">
+        <img src="images/logo-figure.png" alt="">
+      </div>
+      <span class="eyebrow" data-reveal style="--d: 0.05s">About Us</span>
+      <h1 data-reveal data-i18n="about.h1" style="--d: 0.1s">Beauty, made <em class="text-shimmer">personal</em></h1>
+      <p class="lux-lead" data-reveal style="--d: 0.2s">Golden Paradise Salon is a hair and beauty studio where every guest is welcomed, listened to, and cared for — from the first consultation to the final touch.</p>
+      <div class="hero-actions" data-reveal style="--d: 0.3s">
+        <a href="contact.html" class="btn btn-gold btn-pill btn-shine">Book a Visit</a>
+        <a href="services.html" class="link-secondary">Our Services</a>
+      </div>
+    </div>
+
+    <nav class="about-hero-cats" data-reveal style="--d: 0.4s" aria-label="Our services">
+      <a href="services.html#hair">Hair</a>
+      <i aria-hidden="true">✦</i>
+      <a href="services.html#nails">Nails</a>
+      <i aria-hidden="true">✦</i>
+      <a href="services.html#lashes">Lashes &amp; Brows</a>
+      <i aria-hidden="true">✦</i>
+      <a href="services.html#body">Body Shape</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section lux-story">
+  <div class="container about-story">
+    <div data-reveal>
+      <span class="eyebrow eyebrow-line">Our Story</span>
+      <h2 data-i18n="about.story.h2">A calmer, more personal kind of <em>salon</em></h2>
+    </div>
+    <div class="about-story-text" data-reveal style="--d: 0.1s">
+      <p class="about-drop">Golden Paradise Salon opened its doors with a clear mission: create a studio where guests feel genuinely cared for, not rushed through an appointment.</p>
+      <p>Today our artists cover hair, nails, lashes and brows, and body treatments — all under one roof, all with the same attention to detail.</p>
+      <p>Every stylist on our team trains continuously in modern cutting, color, and treatment techniques, so you always leave with a look that's current, healthy, and unmistakably yours.</p>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="split">
-      <div class="split-media" aria-hidden="true">Since 2014</div>
-      <div class="split-text">
-        <span class="eyebrow">How We Started</span>
-        <h2>A calmer, more personal kind of salon</h2>
-        <p>Golden Paradise Salon opened its doors with a clear mission: create a studio where guests feel genuinely cared for, not rushed through an appointment. What began as a small three-chair studio has grown into a full-service salon trusted by hundreds of regular guests.</p>
-        <p>Every stylist on our team trains continuously in modern cutting, color, and treatment techniques, so you always leave with a look that's current, healthy, and unmistakably yours.</p>
-        <ul class="value-list">
-          <li><span class="num">01</span><div><h4>Craft First</h4><p>Every service starts with a real consultation, not a guess.</p></div></li>
-          <li><span class="num">02</span><div><h4>Healthy Hair, Always</h4><p>We prioritize the long-term health of your hair over quick fixes.</p></div></li>
-          <li><span class="num">03</span><div><h4>An Elevated Experience</h4><p>Warm, unhurried, and detail-oriented from check-in to check-out.</p></div></li>
-        </ul>
+    <div class="lux-section-head">
+      <div>
+        <span class="eyebrow eyebrow-line" data-reveal>What we believe</span>
+        <h2 data-reveal data-i18n="about.values.h2">Our <em>promise</em></h2>
+      </div>
+    </div>
+    <div class="about-values">
+      <div class="about-value" data-reveal>
+        <span class="num">01</span>
+        <h3>Craft First</h3>
+        <p>Every service starts with a real consultation, not a guess.</p>
+      </div>
+      <div class="about-value" data-reveal style="--d: 0.1s">
+        <span class="num">02</span>
+        <h3>Healthy Beauty, Always</h3>
+        <p>We prioritize the long-term health of your hair, skin and nails over quick fixes.</p>
+      </div>
+      <div class="about-value" data-reveal style="--d: 0.2s">
+        <span class="num">03</span>
+        <h3>An Elevated Experience</h3>
+        <p>Warm, unhurried, and detail-oriented from check-in to check-out.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-cream-dark">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Meet the Team</span>
-      <h2>Our Master Stylists</h2>
-      <p>A team of specialists across cutting, color, extensions, and bridal styling.</p>
+<section class="section about-brand">
+  <div class="container about-brand-grid">
+    <div class="about-badge" data-reveal>
+      <img src="images/logo-badge.png" alt="Golden Paradise Salon — Beauty by Myself, make up and hair artists logo">
     </div>
-    <div class="grid-4">
-      <div class="team-card">
-        <div class="team-photo">GM</div>
-        <h4>Giselle Moreau</h4>
-        <p class="role">Founder &amp; Master Stylist</p>
-        <p class="bio">12+ years specializing in precision cutting and color correction.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-photo">DK</div>
-        <h4>Daniela Kim</h4>
-        <p class="role">Color Specialist</p>
-        <p class="bio">Balayage and dimensional color expert with an eye for tone.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-photo">RT</div>
-        <h4>Renee Torres</h4>
-        <p class="role">Extensions &amp; Texture</p>
-        <p class="bio">Certified in hand-tied and tape-in extension methods.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-photo">JL</div>
-        <h4>Jordan Lee</h4>
-        <p class="role">Bridal &amp; Event Stylist</p>
-        <p class="bio">Specializes in long-lasting updos for weddings and events.</p>
-      </div>
+    <div data-reveal style="--d: 0.1s">
+      <span class="eyebrow eyebrow-line">Our Signature</span>
+      <h2>Beauty by <em>Myself</em></h2>
+      <p>Beauty by Myself is the signature of our make-up and hair artists — the name behind every look we create, and a reminder that true beauty starts with being yourself.</p>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
+<section class="section">
   <div class="container">
-    <h2>Come see the studio for yourself</h2>
-    <p>We'd love to welcome you in for a consultation and show you the Golden Paradise experience.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold">Book a Visit</a>
-      <a href="gallery.html" class="btn btn-outline">See Our Work</a>
+    <div class="lux-section-head">
+      <div>
+        <span class="eyebrow eyebrow-line" data-reveal>Meet the Team</span>
+        <h2 data-reveal data-i18n="about.team.h2">Artists for every <em>detail</em></h2>
+      </div>
+      <p data-reveal>A team of specialists across hair, nails, lashes and body care.</p>
+    </div>
+    <div class="about-team">
+      <a href="services.html#hair" class="about-team-card" data-reveal>
+        <div class="about-team-photo"><img src="images/team/hair-makeup.jpg" alt="Hair and makeup artist at Golden Paradise Salon holding gold scissors" style="object-position: 40% 40%"></div>
+        <span class="num">01</span>
+        <h3>Hair &amp; Makeup Artists</h3>
+        <p>Nanoplasty, balayage, colour and makeup for every occasion.</p>
+      </a>
+      <a href="services.html#nails" class="about-team-card" data-reveal style="--d: 0.08s">
+        <div class="about-team-photo is-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linejoin="round"><rect x="9.5" y="2" width="5" height="7" rx="1"/><rect x="8" y="9" width="8" height="2.2" rx="0.6"/><rect x="6" y="11.2" width="12" height="10.8" rx="3"/><path d="M9 15.5h6"/></svg></div>
+        <span class="num">02</span>
+        <h3>Nail Artists</h3>
+        <p>Manicures, pedicures and nail art with a golden touch.</p>
+      </a>
+      <a href="services.html#lashes" class="about-team-card" data-reveal style="--d: 0.16s">
+        <div class="about-team-photo is-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 13 2 13z"/><circle cx="12" cy="13" r="3"/><path d="M12 7V4.5M8 7.6 7 5.4M16 7.6l1-2.2M4.8 9.6 3.3 8M19.2 9.6 20.7 8"/></svg></div>
+        <span class="num">03</span>
+        <h3>Lash &amp; Brow Specialists</h3>
+        <p>Lash lifts and microblading that frame your face.</p>
+      </a>
+      <a href="services.html#body" class="about-team-card" data-reveal style="--d: 0.24s">
+        <div class="about-team-photo is-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linejoin="round"><path d="M12 4c2.2 3 2.2 7.5 0 11.5-2.2-4-2.2-8.5 0-11.5z"/><path d="M12 15.5c-3.2-.8-6.2-3.2-7-7.5 3.2.2 6.2 2.4 7 7.5z"/><path d="M12 15.5c3.2-.8 6.2-3.2 7-7.5-3.2.2-6.2 2.4-7 7.5z"/><path d="M3.5 15.5c2.2 2.8 5.2 4 8.5 4s6.3-1.2 8.5-4"/></svg></div>
+        <span class="num">04</span>
+        <h3>Body Therapists</h3>
+        <p>Lymphatic drainage, anti-cellulite and relaxing massages.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section lux-story">
+  <div class="container about-ig" data-reveal>
+    <span class="eyebrow">Follow Our Work</span>
+    <h2 data-i18n="about.ig.h2">See more on <em>Instagram</em></h2>
+    <p>New looks, nail sets and moments from the studio.</p>
+    <div class="about-ig-links">
+      <a href="https://www.instagram.com/golden_paradise_salon/" target="_blank" rel="noopener" class="about-ig-link">
+        <span class="about-ig-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        </span>
+        <span><strong>@golden_paradise_salon</strong><small>Salon</small></span>
+      </a>
+      <a href="https://www.instagram.com/_golden_nailss/" target="_blank" rel="noopener" class="about-ig-link">
+        <span class="about-ig-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        </span>
+        <span><strong>@_golden_nailss</strong><small>Nails</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="lux-cta">
+  <div class="container">
+    <div class="lux-cta-box" data-reveal>
+      <span class="eyebrow">Your chair is waiting</span>
+      <h2 data-i18n="about.cta.h2">Come see the studio <em>for yourself</em></h2>
+      <p>We'd love to welcome you in for a consultation and show you the Golden Paradise experience.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold btn-pill btn-shine">Book a Visit</a>
+        <a href="tel:+355676289840" class="btn btn-outline btn-pill">Call 067 628 9840</a>
+      </div>
     </div>
   </div>
 </section>
@@ -124,7 +212,7 @@
         <a href="index.html" class="logo">Golden <span>Paradise</span></a>
         <p>A luxury hair and beauty studio dedicated to expert craft and an elevated guest experience.</p>
         <div class="social-row">
-          <a href="#" aria-label="Instagram">IG</a>
+          <a href="https://www.instagram.com/golden_paradise_salon/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
           <a href="#" aria-label="Facebook">FB</a>
           <a href="#" aria-label="TikTok">TT</a>
         </div>
@@ -142,16 +230,14 @@
       <div class="footer-links">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+15551234567">(555) 123-4567</a></li>
-          <li><a href="mailto:hello@goldenparadisesalon.com">hello@goldenparadisesalon.com</a></li>
-          <li><a href="contact.html">123 Bloom Street, Suite 4<br>Your City, ST 00000</a></li>
+          <li><a href="tel:+355676289840">067 628 9840</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Golden+Paradise+Salon+Kopshti+Botanik+Tirana" target="_blank" rel="noopener">Kopshti Botanik<br>Tiranë, Albania</a></li>
         </ul>
       </div>
       <div class="footer-hours">
         <h4>Hours</h4>
-        <div><span>Tue – Fri</span><span>9am – 7pm</span></div>
-        <div><span>Saturday</span><span>9am – 5pm</span></div>
-        <div><span>Sun – Mon</span><span>Closed</span></div>
+        <div><span>Wed – Mon</span><span>9am – 7pm</span></div>
+        <div><span>Tuesday</span><span>Closed</span></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -161,6 +247,7 @@
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
