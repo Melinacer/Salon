@@ -30,7 +30,7 @@ var SQ = {
     'about.team.h2': 'Artistë për çdo <em>detaj</em>',
     'about.ig.h2': 'Shihni më shumë në <em>Instagram</em>',
     'about.cta.h2': 'Ejani ta shihni studion <em>vetë</em>',
-    'gallery.h1': 'Momente në <em class="text-shimmer">ar</em>',
+    'gallery.h1': 'Bukuri në <em class="text-shimmer">çdo detaj</em>',
     'gallery.cta.h2': 'Ju pëlqen ajo që <em>shihni?</em>',
     'contact.h1': 'Le t\'ju bëjmë të <em class="text-shimmer">shkëlqeni</em>',
     'contact.form.h2': 'Na tregoni çfarë <em>dëshironi</em>'
@@ -38,7 +38,6 @@ var SQ = {
 
   text: {
     // Header, menu & footer (all pages)
-    'Home': 'Ballina',
     'Services': 'Shërbimet',
     'About': 'Rreth nesh',
     'Gallery': 'Galeria',
@@ -59,7 +58,6 @@ var SQ = {
     'Hair': 'Flokë',
     'Nails': 'Thonj',
     'Lashes & Brows': 'Qerpikë & Vetulla',
-    'Body Shape': 'Formësim trupi',
     'Nanoplasty': 'Nanoplasti',
     'Balayage': 'Balayage',
     'Hair Colour': 'Ngjyrosje flokësh',
@@ -75,7 +73,7 @@ var SQ = {
     'Anti-Cellulite': 'Anticelulit',
     'Face Lifting Massage': 'Masazh lifting fytyre',
     'Relax Massage': 'Masazh relax',
-    'Request an Appointment': 'Kërkoni një termin',
+    'Request an Appointment': 'Kërkoni një rezervim',
 
     // Homepage
     'Golden Paradise · Hair & Beauty Studio': 'Golden Paradise · Studio Flokësh & Bukurie',
@@ -92,7 +90,7 @@ var SQ = {
     'Step inside our warm, gold-lit studio and let our team craft a look that\'s entirely yours.': 'Hyni në studion tonë të ngrohtë, të ndriçuar në ar, dhe lërini ekipit tonë t\'ju krijojë një pamje krejtësisht tuajën.',
     'Meet Our Team': 'Njihuni me ekipin',
     'Your chair is waiting': 'Karrigia juaj ju pret',
-    'Reserve your spot with one of our stylists — appointments fill quickly.': 'Rezervoni vendin tuaj me një nga stilistët tanë — terminet plotësohen shpejt.',
+    'Reserve your spot with one of our stylists — appointments fill quickly.': 'Rezervoni vendin tuaj me një nga stilistët tanë — vendet plotësohen shpejt.',
     'Call 067 628 9840': 'Telefononi 067 628 9840',
 
     // Services page
@@ -112,8 +110,8 @@ var SQ = {
     'Hand-painted, natural-looking color with a soft grow-out.': 'Ngjyrë e pikturuar me dorë, me pamje natyrale dhe rritje të butë.',
     'Full color, root touch-ups, and tone refreshes.': 'Ngjyrosje e plotë, ngjyrosje rrënjësh dhe rifreskim i tonit.',
     'Makeup for weddings, events, and special occasions.': 'Make-up për dasma, evente dhe raste të veçanta.',
-    'Shaping, cuticle care, and polish for beautiful hands.': 'Formësim, kujdes për kutikulat dhe llak për duar të bukura.',
-    'Relaxing foot care with shaping and polish.': 'Kujdes relaksues për këmbët, me formësim dhe llak.',
+    'Shaping, cuticle care, and polish for beautiful hands.': 'Kujdes i plotë për thonjtë dhe kutikulat, me ngjyrën që dëshironi, për duar të bukura.',
+    'Relaxing foot care with shaping and polish.': 'Kujdes relaksues për këmbët dhe thonjtë, me ngjyrën që dëshironi.',
     'Strengthening and restorative treatments for healthy nails.': 'Trajtime forcuese dhe rigjeneruese për thonj të shëndetshëm.',
     'Lifted, curled lashes paired with beautifully shaped brows.': 'Qerpikë të ngritur dhe të përkulur, me vetulla të formësuara bukur.',
     'Semi-permanent, hair-stroke brows for natural fullness.': 'Vetulla gjysmë të përhershme me teknikën qime-qime, për një pamje të plotë dhe natyrale.',
@@ -163,7 +161,7 @@ var SQ = {
     'All': 'Të gjitha',
     'Gold flake almond nails': 'Thonj bajame me fletë ari',
     'Silky blonde finish': 'Bjonde e lëmuar si mëndafsh',
-    'Long & glass-smooth': 'E gjatë & e lëmuar si xham',
+    'Long & glass-smooth': 'E gjatë & e lëmuar',
     'Classic red': 'E kuqe klasike',
     'Milky almond': 'Bajame në ngjyrë qumështi',
     'Red stiletto': 'Stileto e kuqe',
