@@ -56,14 +56,69 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    document.querySelectorAll('.svc-cat').forEach(function (cat) { spy.observe(cat); });
+    document.querySelectorAll('.svc-cat, #nanoplasty').forEach(function (cat) { spy.observe(cat); });
   }
 
-  // Contact page: "Book" buttons link here with ?cat=hair|nails|lashes|body,
+  // Nanoplasty benefits slider: swiping is native scroll-snap; arrows and dots
+  // sit on top. The active dot's fill animation doubles as the autoplay timer.
+  document.querySelectorAll('.nano-slider').forEach(function (slider) {
+    var track = slider.querySelector('.nano-track');
+    var slides = track.querySelectorAll('.nano-slide');
+    var dotsWrap = slider.querySelector('.nano-dots');
+    var current = -1;
+
+    var dots = Array.prototype.map.call(slides, function (slide, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Benefit ' + (i + 1));
+      dot.addEventListener('click', function () { go(i); });
+      dot.addEventListener('animationend', function () { go(i + 1); });
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    function mark(i) {
+      if (i === current) return;
+      current = i;
+      slides.forEach(function (s, j) { s.classList.toggle('is-active', j === i); });
+      dots.forEach(function (d, j) { d.classList.toggle('is-active', j === i); });
+    }
+
+    function go(i) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+      mark(i);
+    }
+
+    var settle;
+    track.addEventListener('scroll', function () {
+      clearTimeout(settle);
+      settle = setTimeout(function () { mark(Math.round(track.scrollLeft / track.clientWidth)); }, 80);
+    });
+
+    slider.querySelector('.nano-prev').addEventListener('click', function () { go(current - 1); });
+    slider.querySelector('.nano-next').addEventListener('click', function () { go(current + 1); });
+
+    // Pause while hovered, focused, or off screen
+    function pause(on) { slider.classList.toggle('is-paused', on); }
+    slider.addEventListener('mouseenter', function () { pause(true); });
+    slider.addEventListener('mouseleave', function () { pause(false); });
+    slider.addEventListener('focusin', function () { pause(true); });
+    slider.addEventListener('focusout', function () { pause(false); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        slider.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+      }).observe(slider);
+    }
+
+    mark(0);
+  });
+
+  // Contact page: "Book" buttons link here with ?cat=nanoplasty|hair|nails|lashes|body,
   // which pre-selects that category in the service dropdown
   var serviceSelect = document.getElementById('service');
   var cat = new URLSearchParams(window.location.search).get('cat');
-  var catIndex = { hair: 1, nails: 2, lashes: 3, body: 4 }[cat];
+  var catIndex = { nanoplasty: 1, hair: 2, nails: 3, lashes: 4, body: 5 }[cat];
   if (serviceSelect && catIndex && serviceSelect.options[catIndex]) {
     serviceSelect.selectedIndex = catIndex;
   }

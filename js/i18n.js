@@ -33,7 +33,8 @@ var SQ = {
     'gallery.h1': 'Bukuri në <em class="text-shimmer">çdo detaj</em>',
     'gallery.cta.h2': 'Ju pëlqen ajo që <em>shihni?</em>',
     'contact.h1': 'Le t\'ju bëjmë të <em class="text-shimmer">shkëlqeni</em>',
-    'contact.form.h2': 'Na tregoni çfarë <em>dëshironi</em>'
+    'contact.form.h2': 'Na tregoni çfarë <em>dëshironi</em>',
+    'nano.h2': 'Arti i <em>Nanoplastisë</em>'
   },
 
   text: {
@@ -74,6 +75,39 @@ var SQ = {
     'Face Lifting Massage': 'Masazh lifting fytyre',
     'Relax Massage': 'Masazh relax',
     'Request an Appointment': 'Kërkoni një rezervim',
+
+    // Nanoplasty spotlight (homepage + services)
+    'Signature Treatment': 'Trajtimi ynë kryesor',
+    'Our signature hair treatment. Nanoplasty uses nano-sized molecules of amino acids and nourishing actives that penetrate deep into the hair fibre, repairing it from within and leaving it smooth, soft and full of shine.': 'Trajtimi ynë kryesor për flokët. Nanoplastia përdor molekula në madhësi nano të aminoacideve dhe përbërësve ushqyes, që depërtojnë thellë në fijen e flokut, e riparojnë nga brenda dhe e lënë të lëmuar, të butë dhe plot shkëlqim.',
+    '2–4 hours': '2–4 orë',
+    'Treatment time': 'Kohëzgjatja e trajtimit',
+    'Up to 6 months': 'Deri në 6 muaj',
+    'Long-lasting results': 'Rezultate afatgjata',
+    'All hair types': 'Çdo lloj flokësh',
+    'Incl. coloured & blonde': 'Edhe të ngjyrosura & bjonde',
+    'Book Nanoplasty': 'Rezervo Nanoplastinë',
+    'See our results': 'Shihni rezultatet tona',
+    'Discover Nanoplasty': 'Zbuloni Nanoplastinë',
+    'Frizz-free, silky hair': 'Flokë të lëmuara si mëndafshi, pa fryrje',
+    'Tames frizz and unruly volume for a sleek, polished look — even on humid days.': 'Zbut fryrjen dhe volumin e tepërt për një pamje të lëmuar dhe elegante — edhe në ditët me lagështi.',
+    'Mirror-like shine': 'Shkëlqim si pasqyrë',
+    'A smoother hair surface reflects light for a healthy, glass-like gloss.': 'Sipërfaqja e lëmuar e flokut reflekton dritën për një shkëlqim të shëndetshëm, si xhami.',
+    'Deep repair from within': 'Riparim i thellë nga brenda',
+    'Nano-molecules fill damaged areas of the hair fibre, restoring strength, softness and elasticity.': 'Molekulat nano mbushin pjesët e dëmtuara të fijes së flokut dhe i rikthejnë forcën, butësinë dhe elasticitetin.',
+    'Easy everyday styling': 'Krehje e lehtë çdo ditë',
+    'Hair dries faster and stays manageable, so you spend less time styling every day.': 'Flokët thahen më shpejt dhe krehen lehtë, kështu që shpenzoni më pak kohë për t\'i rregulluar çdo ditë.',
+    'Results that last': 'Rezultate që zgjasin',
+    'Enjoy smoother hair for up to 6 months — suitable for coloured and blonde hair too.': 'Shijoni flokë të lëmuara deri në 6 muaj — i përshtatshëm edhe për flokë të ngjyrosura dhe bjonde.',
+    'How it works': 'Si funksionon',
+    'Consultation': 'Konsultimi',
+    'We look at your hair\'s condition and the result you want.': 'Vlerësojmë gjendjen e flokëve tuaj dhe rezultatin që dëshironi.',
+    'Deep cleanse': 'Larje e thellë',
+    'A clarifying wash prepares the hair to absorb the treatment.': 'Një larje pastruese i përgatit flokët për të thithur trajtimin.',
+    'Application': 'Aplikimi',
+    'The nanoplasty formula is applied strand by strand and left to work.': 'Formula e nanoplastisë aplikohet tufë pas tufe dhe lihet të veprojë.',
+    'Seal & shine': 'Fiksim & shkëlqim',
+    'A blow-dry and flat iron seal the treatment in for a smooth, glossy finish.': 'Fëni dhe pllaka e fiksojnë trajtimin për një rezultat të lëmuar dhe me shkëlqim.',
+    'Aftercare tip: use a sulphate-free shampoo to make your results last longer.': 'Këshillë: përdorni shampo pa sulfate që rezultati të zgjasë më shumë.',
 
     // Homepage
     'Golden Paradise · Hair & Beauty Studio': 'Golden Paradise · Studio Flokësh & Bukurie',
