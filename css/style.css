@@ -1496,7 +1496,7 @@ h1, h2, h3, h4 {
 /* ---------- Nanoplasty spotlight (homepage + services) ---------- */
 .nano {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   padding: clamp(4.5rem, 10vh, 7rem) 0;
   scroll-margin-top: calc(var(--header-h) + 4rem);
   background:
@@ -1562,7 +1562,7 @@ h1, h2, h3, h4 {
 }
 
 /* Benefit slides: one photo per benefit, text over a dark fade */
-.nano-slider { position: relative; }
+.nano-slider { position: relative; min-width: 0; }
 
 .nano-track {
   display: flex;
@@ -1579,52 +1579,65 @@ h1, h2, h3, h4 {
 .nano-track::-webkit-scrollbar { display: none; }
 
 .nano-slide {
-  position: relative;
   flex: 0 0 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 40rem;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   scroll-snap-align: start;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 162, 75, 0.12), transparent 70%);
 }
 
-.nano-slide img {
+/* Before | after pair from the salon's own clients */
+.nano-ba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem) 0;
+}
+
+.nano-ba > div {
+  position: relative;
+  aspect-ratio: 430 / 555;
+  overflow: hidden;
+  border-radius: 1.1rem;
+}
+
+.nano-ba img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.06);
+  transform: scale(1.05);
   transition: transform 6s ease-out;
 }
 
-.nano-slide.is-active img { transform: scale(1); }
+.nano-slide.is-active .nano-ba img { transform: scale(1); }
 
-.nano-slide::after {
-  content: '';
+.nano-ba span {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(13, 10, 8, 0) 40%, rgba(13, 10, 8, 0.78) 72%, #0d0a08 100%);
-  pointer-events: none;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--cream);
+  background: rgba(13, 10, 8, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
 }
 
-/* Wide before/after photo: shown whole at the top instead of cropped */
-.nano-slide.is-wide img {
-  height: 64%;
-  padding: 1.25rem 1.25rem 0;
-  border-radius: 2rem;
-  object-fit: cover;
-  transform: none;
-}
-
-.nano-slide.is-wide::after {
-  background: linear-gradient(180deg, rgba(13, 10, 8, 0) 56%, #0d0a08 70%);
+.nano-ba > div + div span {
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  border-color: transparent;
 }
 
 .nano-slide-body {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: auto;
+  padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .nano-slide-body .num {
@@ -1787,8 +1800,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 980px) {
-  .nano-grid { grid-template-columns: 1fr; }
-  .nano-slide { max-height: none; }
+  .nano-grid { grid-template-columns: minmax(0, 1fr); }
   .nano-steps { grid-template-columns: 1fr 1fr; }
 }
 
@@ -1803,12 +1815,12 @@ h1, h2, h3, h4 {
   .nano-facts strong { margin-bottom: 0; }
   .nano-facts span { text-align: right; }
   .nano-steps { grid-template-columns: 1fr; }
-  .nano-slide.is-wide img { height: 52%; }
-  .nano-slide.is-wide::after { background: linear-gradient(180deg, rgba(13, 10, 8, 0) 44%, #0d0a08 56%); }
+  .nano-ba { gap: 0.5rem; }
+  .nano-ba span { bottom: 0.6rem; padding: 0.3rem 0.8rem; font-size: 0.62rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nano-slide img { transition: none; transform: none; }
+  .nano-ba img { transition: none; transform: none; }
   .nano-dots button.is-active::after { animation: none; transform: scaleX(1); }
 }
 

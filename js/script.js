@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function pause(on) { slider.classList.toggle('is-paused', on); }
     slider.addEventListener('mouseenter', function () { pause(true); });
     slider.addEventListener('mouseleave', function () { pause(false); });
-    slider.addEventListener('focusin', function () { pause(true); });
+    // keyboard focus only; a tapped arrow keeps focus and would pause forever
+    slider.addEventListener('focusin', function (e) { pause(e.target.matches(':focus-visible')); });
     slider.addEventListener('focusout', function () { pause(false); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
